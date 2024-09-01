@@ -42,4 +42,23 @@ exports.uploadPost = async (req, res) => {
             message: err.message
         });
     }
+};
+
+exports.getPosts = async(req, res) => {
+
+    try{
+
+        const posts = await Post.find();
+
+        return res.status(200).json({
+            success: true,
+            posts: posts
+        });
+    }
+    catch(err) {
+        return res.status(500).json({
+            success: false,
+            message: err.message
+        });
+    }
 }
