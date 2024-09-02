@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import toast from "react-hot-toast";
+import PostCard from "./PostCard";
 
-export default () => {
+export default ({flag}) => {
 
     const [post, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -27,10 +28,12 @@ export default () => {
                     setPosts(data.posts);
                 }
                 else {
+                    setPosts([]);
                     toast.error("Error Fetching Posts");
                 }
             }
             catch(err) {
+                setPosts([]);
                 console.log(err.message);
                 toast.error("Error Fetching Posts");
             }
@@ -40,15 +43,26 @@ export default () => {
         }
 
         fetchPosts();
-    }, []);
+    }, [flag]);
 
     if (loading) {
         return <div>Loading...</div>;
     }
 
     return (
-        <div>
-            Hi There
+        <div className="w-full p-8 flex-col justify-start items-center gap-3">
+            <h1 className="text-4xl font-semibold">Posts</h1>
+            <div className="flex-col justify-center items-center">
+            {
+                post.length > 0 ? (
+                    post.map((post, index) => {
+                        return <div className="w-[300px]">
+                                <PostCard key={index} post={post}/>
+                            </div>
+                    })
+                ) : <div>No Posts Available</div>
+            }
+            </div>
         </div>
     )
 }
