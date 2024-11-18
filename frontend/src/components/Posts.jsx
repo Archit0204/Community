@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import toast from "react-hot-toast";
 import PostCard from "./PostCard";
+import '../css/Posts.css';
 
 export default ({flag}) => {
 
@@ -50,8 +51,8 @@ export default ({flag}) => {
     }
 
     return (
-        <div className="w-full p-8 flex-col justify-start items-center gap-3">
-            <h1 className="text-4xl font-semibold">Posts</h1>
+        <div className="main_posts w-full p-8 flex-col justify-start items-center gap-3 overflow-hidden ">
+            {/* <h1 className="text-4xl font-semibold">Posts</h1> */}
             <div className="flex-col justify-center items-center">
             {
                 post.length > 0 ? (

@@ -1,0 +1,49 @@
+.main_postcard{
+    min-width: 50vw;
+    min-height: none;
+    background-color: #f1f0f7;
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: all 0.3s linear;
+}
+
+.main_postcard:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#personId{
+    font-size: large;
+}
+
+#communityName{
+    background-color: #1d2c6e;
+    color: white;
+    padding: 0.4% 5%;
+    border-radius: 0.8rem;
+}
+
+#dateMention i{
+    font-size: smaller;
+}
+
+#dateMention{
+    font-size: smaller;
+}
+
+.postTitle{
+    background-color: #d9d8e0;
+    padding: 0.8% 2%;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+.like_button{
+    margin-left: 1%;
+}
+
+.postContent{
+    background-color: #d9d8e0;
+    padding: 0.8% 2%;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    /* min-width: ; */
+}

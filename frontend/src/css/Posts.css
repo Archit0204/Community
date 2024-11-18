@@ -1,0 +1,5 @@
+.main_posts{
+    /* border: 1px solid red; */
+    height: 88vh;
+    overflow-y: scroll;
+}

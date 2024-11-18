@@ -68,7 +68,7 @@ export default ({setFlag}) => {
                             value={postData.title}
                             onChange={changeHandler}
                         />
-                    </div>
+                    </div> 
                     <div>
                         <label className="font-medium">
                             Content

@@ -1,0 +1,189 @@
+.main_signup{
+    background-color: black;
+    justify-content: space-between;
+    padding-top: 4rem;
+}
+
+.logotext{
+    font-family: "Bebas Neue", sans-serif;
+    background-color: rgb(49, 47, 47);
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
+
+.signup_box{
+    width: 25rem;
+    height: 50rem;
+    background-color: rgb(20, 18, 18);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: rgb(225, 216, 216);
+}
+
+.createAccount{
+    font-size: 2.5rem;
+}
+
+.creAccInput{
+    background-color: rgb(49, 47, 47);
+    width: 18rem;
+    height: 3rem;
+    border: 2px solid rgb(68, 61, 61);
+    transition: all 0.2s linear;
+}
+
+.creAccInput:hover{
+    border: 2px solid rgb(146, 141, 141);
+}
+
+.creAccButton{
+    height: 3rem;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    transition: all 0.4s linear;
+}
+
+.creAccButton:hover{
+    background: transparent;
+    border: 2px white solid;
+    color: white;
+}
+
+.creAccButton:active{
+    background: transparent;
+    border: 2px white solid;
+    color: white;
+}
+
+.design_box{
+    width: 51rem;
+    height: 50rem;
+    background-color: black;
+    /* border: 2px solid white; */
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background-color: black;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 0.6rem;
+}
+
+#signup_box{
+    background-color: #2a72f9;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    font-size: xx-large;
+    font-weight: bold;
+    padding-left: 0.5rem;
+    transition: all 0.3s linear;
+}
+
+#signup_box:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    opacity: 99%;
+}
+
+#security_box{
+    background-color: #a3f92a;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    font-size: xx-large;
+    font-weight: bold;
+    padding-left: 0.5rem;
+    color: black;
+    transition: all 0.3s linear;
+}
+
+#security_box:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#user_box{
+    background-color: #e1f92a;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    font-size: xx-large;
+    font-weight: bold;
+    padding-left: 0.5rem;
+    color: black;
+    transition: all 0.3s linear;
+}
+
+#user_box:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#setting_box{
+    background-color: #858585;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    font-size: xx-large;
+    font-weight: bold;
+    padding-left: 0.5rem;
+    color: black;
+    transition: all 0.3s linear;
+}
+
+#setting_box:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+/* #security_box i{
+    height: 2rem;
+} */
+
+.box{ 
+    background: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDdkN2tkMWZyb2pybWR5b25ua2dwaDRkNnhwZmQwMmswY3drc2J0ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4GHf8ZF6Uk2WEvyete/giphy.gif);
+    background-size: 51rem 40rem;
+    border-radius: 1rem;
+    transition: all 0.2s linear;
+}
+
+.box:hover{
+    /* opacity: 95%; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    transform: scale(1.1);
+}
+
+.box:nth-child(1) { background-position: 0 0; }
+.box:nth-child(2) { background-position: -8.5rem 0; }
+.box:nth-child(3) { background-position: -25.5rem 0; }
+.box:nth-child(4) { background-position: -42.5rem 0; }
+.box:nth-child(5) { background-position: 0 -12.5rem; }
+.box:nth-child(6) { background-position: -8.5rem -12.5rem; }
+.box:nth-child(7) { background-position: -25.5rem -12.5rem; }
+.box:nth-child(8) { background-position: -42.5rem -12.5rem; }
+.box:nth-child(9) { background-position: 0 -25rem; }
+.box:nth-child(10) { background-position: -8.5rem -25rem; }
+.box:nth-child(11) { background-position: -25.5rem -25rem; }
+.box:nth-child(12) { background-position: -42.5rem -25rem; }
+.box:nth-child(13) { background-position: 0 -37.5rem; }
+.box:nth-child(14) { background-position: -8.5rem -37.5rem; }
+.box:nth-child(15) { background-position: -25.5rem -37.5rem; }
+.box:nth-child(16) { background-position: -42.5rem -37.5rem; }
+
+.box2{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.box3{
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+

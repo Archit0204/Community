@@ -1,0 +1,17 @@
+.main_profile{
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Userboard{
+    height: 90%;
+    width: 90%;
+    background-color: rgba(215, 231, 250, 0.63);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}

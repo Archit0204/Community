@@ -1,0 +1,23 @@
+.main_navbar{
+    width: 80vw;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 5%;
+    /* border:  3px solid black; */
+}
+
+.main_navbar div:nth-child(1){
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.main_navbar input{
+    background-color: #0e1326;
+    color: white;
+    height: 2.5rem;
+    border-radius: 1rem;
+    width: 120%;
+    padding: 0 10%;
+}

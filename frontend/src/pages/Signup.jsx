@@ -1,6 +1,8 @@
 import { useState } from "react";
 import toast from "react-hot-toast"
 import { Link, useNavigate } from "react-router-dom";
+import logo from '../assets/images/discussion_dock_b&w.png';
+import '../css/Signup.css';
 
 export default () => {
 
@@ -47,91 +49,101 @@ export default () => {
     }
 
     return (
-        <main className="w-full pb-10 max-h-screen flex flex-col items-center bg-gray-50 sm:px-4">
-            <div className="w-full space-y-6 text-gray-600 sm:max-w-md">
+        <main className=" main_signup w-full pb-10 min-h-screen flex flex-row sm:px-4 bg-black">
+            
+            <div className=" signup_box space-y-6 ">
                 <div className="text-center">
-                    <div className="mt-5 space-y-2">
-                        <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Create an account</h3>
-                        <p className="">Already have an account? <Link to="/login" className="font-medium text-indigo-600 hover:text-indigo-500">Log in</Link></p>
+                    <div className="mt-5 space-y-2 flex flex-col items-center">
+                        <img src={logo} alt="logo img" className="h-20 w-25 mb-6" />
+                    <div className=" text-1xl logotext "> <Link to="/" > DISCUSSION DOCK </Link>  </div>
+                    
+                        <h3 className=" createAccount ">Create an account</h3>
+                        <p> Enter your personal data to create your account</p>
+                        {/* <p className="">Already have an account? <Link to="/login" className="font-medium text-indigo-600 hover:text-indigo-500">Log in</Link></p> */}
                     </div>
                 </div>
-                <div className="bg-white shadow p-4 py-6 sm:p-6 sm:rounded-lg">
+                <div className=" shadow sm:rounded-lg flex flex-col items-center">
                     <form
                         onSubmit={submitHandler}
-                        className="space-y-5"
-
+                        className="space-y-3 flex flex-col items-center"
                     >
-                        <div>
-                            <label className="font-medium">
+                        <div className="">
+                            {/* <label className="font-medium">
                                 First Name
-                            </label>
+                            </label> */}
                             <input
                                 type="text"
                                 required
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                                className=" mt-2 px-3 py-2 text-gray-500 outline-none shadow-sm rounded-lg creAccInput"
                                 name="firstName"
                                 value={formData.firstName}
+                                placeholder="First Name"
                                 onChange={changeHandler}
                             />
                         </div>
                         <div>
-                            <label className="font-medium">
+                            {/* <label className="font-medium">
                                 Last Name
-                            </label>
+                            </label> */}
                             <input
                                 type="text"
                                 required
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                                className=" mt-2 px-3 py-2 text-gray-500 outline-none shadow-sm rounded-lg creAccInput"
                                 name="lastName"
                                 value={formData.lastName}
+                                placeholder="Last Name"
                                 onChange={changeHandler}
                             />
                         </div>
                         <div>
-                            <label className="font-medium">
+                            {/* <label className="font-medium">
                                 Email
-                            </label>
+                            </label> */}
                             <input
                                 type="email"
                                 required
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                                className=" mt-2 px-3 py-2 text-gray-500 outline-none shadow-sm rounded-lg creAccInput"
                                 name="email"
                                 value={formData.email}
+                                placeholder="Email"
                                 onChange={changeHandler}
                             />
                         </div>
                         <div>
-                            <label className="font-medium">
+                            {/* <label className="font-medium">
                                 Password
-                            </label>
+                            </label> */}
                             <input
                                 type="password"
                                 required
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                                className=" mt-2 px-3 py-2 text-gray-500 outline-none shadow-sm rounded-lg creAccInput"
                                 name="password"
                                 value={formData.password}
+                                placeholder="Password"
                                 onChange={changeHandler}
                             />
                         </div>
                         <div>
-                            <label className="font-medium">
+                            {/* <label className="font-medium">
                                 Confirm Password
-                            </label>
+                            </label> */}
                             <input
                                 type="password"
                                 required
-                                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                                className=" mt-2 mb-8 px-3 py-2 text-gray-500 outline-none shadow-sm rounded-lg creAccInput"
                                 name="confirmPassword"
+                                placeholder="Confirm Password"
                                 value={formData.confirmPassword}
                                 onChange={changeHandler}
                             />
                         </div>
                         <button
-                            className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+                            className=" creAccButton w-full  font-medium bg-indigo-600  active:bg-indigo-600 rounded-lg "
                         >
-                            Create account
+                            Sign up  <i className="material-icons"> chevron_right </i>
                         </button>
                     </form>
+                    <p className="mt-3">Already have an account? <Link to="/login" className="font-medium text-indigo-600 hover:text-indigo-500">Log in</Link></p>
                     {/* <div className="mt-5">
                         <button className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
                             <svg className="w-5 h-5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,9 +161,55 @@ export default () => {
                             </svg>
                             Continue with Google
                         </button>
-                    </div> */}
+                    </div> *******************put the comment closing tag here */}
                 </div>
             </div>
+
+            
+            <div className="design_box">
+                    <div className="box box1">
+                        <div id="signup_box">
+                        <i className="material-icons"> login</i>
+                            <h1>Sign</h1>
+                            <h1>Up</h1>
+                            
+                        </div>
+                    </div>
+                    <div className="box box2"></div>
+                    <div className="box box3"></div>
+                    <div className="box box4"></div>
+                    <div className="box box1"></div>
+                    <div className="box box2"></div>
+                    <div className="box box3">
+                        <div id="security_box">
+                            <i className="material-icons"> lock</i>
+                            <p>Secure by</p>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                    <div className="box box4"></div>
+                    <div className="box box1"></div>
+                    <div className="box box2"></div>
+                    <div className="box box3"></div>
+                    <div className="box box4"></div>
+                    <div className="box box1"></div>
+                    <div className="box box2">
+                    <div id="user_box">
+                            <i className="material-icons"> person</i>
+                            <p>User</p>
+                            <p>Friendly</p>
+                        </div>
+                    </div>
+                    <div className="box box3 ">
+                        <div id="setting_box">
+                            <i className="material-icons"> settings </i>
+                            <p>Customizable</p>
+                            <p>Settings</p>
+                        </div>
+                    </div>
+                    <div className="box box4"></div>
+            </div>
+
         </main>
     )
 }

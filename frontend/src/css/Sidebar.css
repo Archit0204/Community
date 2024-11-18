@@ -1,0 +1,44 @@
+.main_sidebar{
+    /* border: 4px red solid; */
+    width: 20vw; 
+    background-color: #0e1326;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.div_logotext{
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+.idteller{
+    background-color: #1d2c6e;
+    width: 90%;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+}
+
+.main_sidebar ul{
+    width: 90%;
+    margin-top: 3rem;
+}
+
+.main_sidebar li{
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    font-weight: 300;
+    transition: all 0.2s linear;
+}
+
+.main_sidebar li:hover{
+    color: #5296d5;
+}
+
+.main_sidebar i{
+    margin-right: 5%;
+}
