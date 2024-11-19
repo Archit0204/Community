@@ -15,7 +15,7 @@ export default () => {
             <Sidebar />
 
             <div>
-            < Navbar />
+            {/* < Navbar /> */}
             {/* <UploadPost setFlag={setFlag}/> */}
 
             <Outlet />

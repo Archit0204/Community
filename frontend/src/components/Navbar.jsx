@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../css/Navbar.css'
 
-export default ({isLoggedIn, setIsLoggedIn}) => {
+export default ({isLoggedIn, setIsLoggedIn , heading}) => {
 
     const [state, setState] = useState(false)
 
@@ -16,7 +16,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
 
     return (
         <nav className={`main_navbar md:text-sm ${state ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0" : ""}`} >
-                <div> Home</div>
+                <div> {heading}</div>
                 <div>  <input type="text" placeholder="Search" /> </div>
 
 
@@ -70,3 +70,4 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
         </nav>
     )
 }
+
