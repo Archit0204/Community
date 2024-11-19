@@ -1,3 +1,4 @@
+const Comment = require("../models/Comment");
 const Post = require("../models/Post");
 const User = require("../models/User");
 const { postSchema } = require("../utils/validation");
@@ -20,7 +21,6 @@ exports.uploadPost = async (req, res) => {
         
 
         const post = await Post.create({
-            title: postBody.title,
             content: postBody.title,
             author: userId
         });
@@ -61,4 +61,62 @@ exports.getPosts = async(req, res) => {
             message: err.message
         });
     }
+}
+
+exports.likePost = async(req, res) => {
+
+    try {
+
+        const postId = req.params.id;
+
+        const post = await Post.findByIdAndUpdate(postId, {
+            likes: {
+                $push: {
+                    userId: req.user.userId
+                }
+            }
+        });
+
+        return res.status(200).json({
+            success: true,
+            message: "Post Liked"
+        });
+
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Internal Server Error",
+            error: error.message
+        });
+    }
+
+}
+
+exports.commentPost = async(req, res) => {
+
+    try {
+        
+        const postId = req.params.id;
+
+        const body = await req.body.json();
+
+        const comment = await Comment.create({
+            author: req.user.userId,
+            content: body.content,
+            postId: postId,
+        });
+
+        return res.status(200).json({
+            success: true,
+            message: "Comment Added",
+        });
+        
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Internal Server Error",
+            error: error.message
+        });
+    }
+
 }
