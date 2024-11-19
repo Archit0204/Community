@@ -2,4 +2,10 @@
     /* border: 1px solid red; */
     height: 88vh;
     overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; 
+}
+
+.main_posts::-webkit-scrollbar {
+    display: none;
 }

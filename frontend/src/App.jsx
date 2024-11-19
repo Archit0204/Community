@@ -9,9 +9,11 @@ import PrivateRoute from "./components/PrivateRoute";
 import Dashboard from "./pages/Dashboard";
 import Footer from "./components/Footer";
 import logo from './assets/images/discussion_dock.png';
+import Dashboard_home from "./components/Dashboard_home";
 import Posts from "./components/Posts";
 import Communities from "./components/Communities";
 import Profile from "./components/Profile";
+import UploadPost from "./components/UploadPost";
 
 function App() {
 
@@ -32,9 +34,10 @@ function App() {
                         <Dashboard />
                     </PrivateRoute>
                     }>
-                    <Route index element={<Posts flag={flag} />} />
+                    <Route index element={<Dashboard_home/>} />
                     <Route path="communities" element={<Communities />} />
                     <Route path="profile" element={<Profile />} />
+                    <Route path="upload" element={<UploadPost setFlag={setFlag}/>} />
                 </Route>
             </Routes>
                 
