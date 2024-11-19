@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: bolder;
 
 }
@@ -29,6 +29,13 @@
 .communitylistItems{
     background-color: #f1f0f7;
     border-radius: 0.7rem;
+    transition: all 0.4s linear;
+    color: white;
+    font-weight: bolder;
+}
+
+.communitylistItems:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .communitylistItem1{
@@ -36,8 +43,13 @@
     grid-column-end: 6;
     grid-row-start: 2;
     grid-row-end: 4;
-    background-image: url(https://i.pinimg.com/736x/2a/c1/f8/2ac1f81ece49d194865e0a29c1b240d9.jpg);
+    background-image: url(https://i.pinimg.com/736x/f6/ee/a1/f6eea155cfff6f78b53f44df33c3a793.jpg);
     background-size: cover;
+    font-size: 4rem;
+    font-weight: bolder;
+    padding-left: 2.6rem;
+    padding-top: 2rem;
+    color: white;
 }
 
 .communitylistItem2{
@@ -45,6 +57,11 @@
     grid-column-end: 8;
     grid-row-start: 2;
     grid-row-end: 4;
+    background-image: url(https://i.pinimg.com/originals/13/42/28/1342288822bb3e9829e1c71e90ab0d18.gif);
+    background-size: 100% 80%;
+    font-size: larger;
+    padding-top: 90%;
+    padding-left: 16%;
 }
 
 .communitylistItem3{
@@ -52,6 +69,8 @@
     grid-column-end: 9;
     grid-row-start: 2;
     grid-row-end: 4;
+    background-image: url(https://i.pinimg.com/736x/60/1d/08/601d08aa38e410ac92b5185847eb3ee0.jpg);
+    background-size: 250% 225%;
 }
 
 .communitylistItem4{
@@ -88,5 +107,5 @@
     grid-row-start: 4;
     grid-row-end: 7;
     background-image: url(https://i.pinimg.com/736x/0f/e3/5f/0fe35fa1921164d81c60d3546e515fc2.jpg);
-    background-size: contain;
+    background-size: 100% 100%;
 }
