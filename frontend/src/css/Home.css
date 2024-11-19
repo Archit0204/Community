@@ -98,6 +98,11 @@ body{
     position: absolute;
     top: 110%;
     left: -20.925%;
+    padding: 1% 0.1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     animation: tabAnimate 14s linear infinite;
     box-shadow: rgba(255, 255, 255, 0.17) 0px -3px 25px 0px inset, rgba(104, 80, 80, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
@@ -295,4 +300,78 @@ body{
     height: 169px;
     bottom: -169px;
     animation-delay: 30s;
+}
+
+.lessContent{
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+    width: 90%;
+    /* padding: 1.2rem; */
+    /* margin-left: 10%; */
+    /* border: 3px solid white; */
+    /* display: flex; */
+    /* justify-content: center; */
+
+
+}
+
+.boldContent{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+    font-size: x-large;
+}
+
+
+.listImg{
+    height: 100%;
+    width: 90%;
+    border-radius: 1.5rem;
+    background-image: url(https://i.pinimg.com/736x/8a/4f/3f/8a4f3faca7cd23e37e0926196aa33e2c.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% ;
+}
+
+.listImg div{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.listImg h1{
+    background-color: rgba(128, 128, 128, 0.489);
+    padding: 3% 4%;
+    border-radius: 0.4rem;
+}
+
+.listImg2{
+    height: 100%;
+    width: 90%;
+    border-radius: 1.5rem;
+    background-image: url(https://i.pinimg.com/736x/8f/04/30/8f0430959b210e295bae1857cd6d4a67.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% ;
+}
+
+.listImg2 div{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.listImg2 h1{
+    background-color: rgba(128, 128, 128, 0.489);
+    padding: 3% 4%;
+    border-radius: 0.4rem;
 }

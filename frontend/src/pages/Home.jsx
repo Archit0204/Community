@@ -52,13 +52,96 @@ export default () => {
 
             <div className="tabsDiv">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li className="tabList">
+                        <div className="lessContent">
+                            <div className="left">
+                                Trending
+                            </div>
+                            <div className="material-icons">
+                                whatshot
+                            </div>
+                        </div>
+                        <div className="boldContent">
+                                Entertainment
+                        </div>
+                    </li>
+                    <li>
+
+                    <div className="listImg"> 
+                        <div> <h1>Akon </h1> <span className="material-icons">bookmark</span> 
+                        </div>
+                        <div className="w-fit">
+                            <span className="material-icons"> favorite</span>
+                            <span className="material-icons"> comment</span>
+                            <span className="material-icons"> send</span>
+                        </div>
+                    </div>
+
+
+                    </li>
+                    <li className="tabList">
+                    <div className="lessContent">
+                            <div className="left">
+                                Live Score
+                            </div>
+                            <div className="material-icons">
+                            sports_score
+                            </div>
+                        </div>
+                        <div className="boldContent">
+                                Sports
+                        </div>
+                    </li>
+                    <li className="tabList">
+                    <div className="lessContent">
+                            <div className="left">
+                                AI Innovation
+                            </div>
+                            <div className="material-icons">
+                            psychology
+                            </div>
+                        </div>
+                        <div className="boldContent">
+                                Education
+                        </div>
+                    </li>
+                    <li className="tabList">
+                    <div className="lessContent">
+                            <div className="left">
+                                Hot Topics
+                            </div>
+                            <div className="material-icons">
+                            newspaper
+                            </div>
+                        </div>
+                        <div className="boldContent">
+                                News
+                        </div>
+                    </li>
+                    <li>
+                    <div className="listImg2"> 
+                        <div> <h1> Seria </h1> <span className="material-icons">bookmark</span> 
+                        </div>
+                        <div className="w-fit">
+                            <span className="material-icons"> favorite</span>
+                            <span className="material-icons"> comment</span>
+                            <span className="material-icons"> send</span>
+                        </div>
+                    </div>
+                    </li>
+                    <li className="tabList">
+                    <div className="lessContent">
+                            <div className="left">
+                                Wind Speed
+                            </div>
+                            <div className="material-icons">
+                            air
+                            </div>
+                        </div>
+                        <div className="boldContent">
+                                Nature
+                        </div>
+                    </li>
                 </ul>
             </div>
             
