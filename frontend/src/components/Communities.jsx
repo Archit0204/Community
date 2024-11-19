@@ -14,11 +14,15 @@ export default() => {
                     <div className="communitylistHeading "> List of Communities</div>
                     <div className="communitylistItems communitylistItem1 "> SPORTS</div>
                     <div className="communitylistItems communitylistItem2 "> TECHNOLOGY</div>
-                    <div className="communitylistItems communitylistItem3 "></div>
-                    <div className="communitylistItems communitylistItem4 "></div>
-                    <div className="communitylistItems communitylistItem5 "></div>
-                    <div className="communitylistItems communitylistItem6 "></div>
-                    <div className="communitylistItems communitylistItem7 "></div>
+                    <div className="communitylistItems communitylistItem3 ">
+                        <h2>A</h2>
+                        <h2>R</h2>
+                        <h2>T</h2>
+                    </div>
+                    <div className="communitylistItems communitylistItem4 "> TRAVEL</div>
+                    <div className="communitylistItems communitylistItem5 "> ENTERTAINMENT</div>
+                    <div className="communitylistItems communitylistItem6 "> GAMES</div>
+                    <div className="communitylistItems communitylistItem7 "> NATURE</div>
                     <div className="communitylistItems communitylistItem8 "></div>
                 </div>
                  <Posts/>
