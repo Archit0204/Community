@@ -15,10 +15,8 @@ exports.uploadPost = async (req, res) => {
                 message: "Invalid Input Schema"
             });
         }
-        console.log("Parsing done");
         
         const userId = req.user.userId;
-        
 
         const post = await Post.create({
             content: postBody.title,
@@ -48,7 +46,7 @@ exports.getPosts = async(req, res) => {
 
     try{
 
-        const posts = await Post.find();
+        const posts = await Post.find().populate('author');
 
         return res.status(200).json({
             success: true,
