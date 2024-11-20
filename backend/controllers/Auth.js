@@ -131,7 +131,7 @@ exports.fetchUser = async (req, res) => {
         
         const userId = req.user.userId;
 
-        const user = await User.findById(userId);
+        const user = await User.findById(userId).populate('posts');
 
         return res.status(200).json({
             success: true,

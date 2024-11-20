@@ -8,6 +8,7 @@ exports.uploadPost = async (req, res) => {
     try{
 
         const postBody = req.body;
+        console.log(postBody);
         
         if (!postSchema.safeParse(postBody).success) {
             return res.status(403).json({
@@ -20,7 +21,8 @@ exports.uploadPost = async (req, res) => {
 
         const post = await Post.create({
             content: postBody.title,
-            author: userId
+            author: userId,
+            communtiy: "Coming Soon"
         });
         
         const updatedUser = await User.findByIdAndUpdate(
@@ -46,7 +48,7 @@ exports.getPosts = async(req, res) => {
 
     try{
 
-        const posts = await Post.find().populate('author');
+        const posts = await Post.find().populate('author comments');
 
         return res.status(200).json({
             success: true,
@@ -66,18 +68,19 @@ exports.likePost = async(req, res) => {
     try {
 
         const postId = req.params.id;
-
+        
         const post = await Post.findByIdAndUpdate(postId, {
-            likes: {
-                $push: {
-                    userId: req.user.userId
-                }
+            $push: {
+                likes: req.user.userId
             }
+        }, {
+            new: true
         });
 
         return res.status(200).json({
             success: true,
-            message: "Post Liked"
+            message: "Post Liked",
+            post
         });
 
     } catch (error) {
@@ -96,7 +99,7 @@ exports.commentPost = async(req, res) => {
         
         const postId = req.params.id;
 
-        const body = await req.body.json();
+        const body = req.body;
 
         const comment = await Comment.create({
             author: req.user.userId,
@@ -104,9 +107,18 @@ exports.commentPost = async(req, res) => {
             postId: postId,
         });
 
+        const post = await Post.findByIdAndUpdate(postId, {
+            $push: {
+                comments: comment._id
+            }
+        }, {
+            new: true
+        }).populate('comments');
+        
         return res.status(200).json({
             success: true,
             message: "Comment Added",
+            post
         });
         
     } catch (error) {
