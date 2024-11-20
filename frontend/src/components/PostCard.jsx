@@ -57,7 +57,7 @@ export default function Postcard({ post }) {
         borderRadius: '8px',
         padding: '16px',
         marginBottom: '16px',
-        maxWidth: '500px',
+        maxWidth: '600px',
         boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
         }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>

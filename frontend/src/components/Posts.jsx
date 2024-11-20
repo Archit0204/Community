@@ -57,7 +57,7 @@ export default ({flag}) => {
             {
                 post.length > 0 ? (
                     post.map((post, index) => {
-                        return <div className="w-[300px]">
+                        return <div className="w-[600px]">
                                 <PostCard key={index} post={post}/>
                             </div>
                     })
