@@ -6,8 +6,20 @@ import { Link } from "react-router-dom";
 export default ({setFlag}) => {
 
     const [postData, setPostData] = useState({
-        title: "", content: ""
+        title: "", content: "", community: ""
     });
+
+    const communities = [
+        { value: "", label: "Select community" },
+        { value: "sports", label: "Sports" },
+        { value: "technology", label: "Technology" },
+        { value: "arts", label: "Arts" },
+        { value: "travel", label: "Travel" },
+        { value: "entertainment", label: "Entertainment" },
+        { value: "games", label: "Games" },
+        { value: "nature", label: "Nature" },
+        { value: "innovation", label: "Innovation" },
+    ];
 
     function changeHandler(event) {
         setPostData((prev) => (
@@ -37,7 +49,7 @@ export default ({setFlag}) => {
 
             if (data.success) {
                 setPostData({
-                    title: "", content: ""
+                    title: "", content: "", community: ""
                 });
                 setFlag((prev => !prev));
                 toast.success("Post Added");
@@ -76,9 +88,26 @@ export default ({setFlag}) => {
                             onChange={changeHandler}
                         />
                     </div> 
+                    <div>
+                        <select
+                            name="community"
+                            id="communitySelector"
+                            className="w-full px-2 py-2 selectCommunity"
+                            value={postData.community || ""}
+                            onChange={(e) => setPostData({ ...postData, community: e.target.value })}
+                        >
+                            {communities.map((community, index) => (
+                                <option key={index} value={community.value}>
+                                    {community.label}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+
                 </form>
-                    {/* <div>
-                        <label className="font-medium">
+
+                {/* <div>
+                    <label className="font-medium">
                             Content
                         </label>
                         <textarea
@@ -87,9 +116,10 @@ export default ({setFlag}) => {
                             className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg resize-none"
                             name="content"
                             value={postData.content}
-                            onChange={changeHandler}
-                        />
-                    </div> */}
+                            onChange={changeHandler} />
+                </div> */}
+
+                
                 <div className="flex w-full justify-end">
                             <button className=" border-2 px-10 py-2 rounded-lg border-grey"> <Link to="/dashboard">   Cancel </Link> </button>
                         <button

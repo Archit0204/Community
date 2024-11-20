@@ -34,10 +34,11 @@ function App() {
                         <Dashboard />
                     </PrivateRoute>
                     }>
-                    <Route index element={<Dashboard_home/>} />
+                    <Route path="" element={<Dashboard_home/>} />
                     <Route path="communities" element={<Communities />} />
                     <Route path="profile" element={<Profile />} />
                     <Route path="upload" element={<UploadPost setFlag={setFlag}/>} />
+                    <Route path="communities/upload" element={<UploadPost setFlag={setFlag}/>} />
                 </Route>
             </Routes>
                 

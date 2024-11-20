@@ -5,7 +5,7 @@ import Navbar from "./Navbar"
 import PostCard from "./PostCard"
 import "../css/Profile.css"
 import userImg from "../assets/images/userIcon.png";
-import ansh from "../assets/images/WhatsApp Image 2024-11-20 at 17.20.21_d5594856.jpg";
+import ansh from "../assets/images/WhatsApp Image 2024-11-20 at 19.26.07_5470287a.jpg";
 
 export default function Profile() {
     const [user, setUser] = useState(null)
@@ -41,7 +41,7 @@ export default function Profile() {
         <div className="main_profile">
             <div className="Userboard">
             <div className="Personalboard">
-                <img className="userimage" src={userImg} alt="User Icon" />
+                <img className="userimage rounded-full" src={ansh} alt="User Icon" />
                 <div className="userName">
                 <span id="name">{user.firstName} {user.lastName}</span>
                 </div>

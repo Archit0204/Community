@@ -23,7 +23,7 @@ export default ({flag}) => {
                 });
                 const data = await response.json();
 
-                console.log(data);
+                data.posts.reverse();
                 
                 if(data.success) {
                     setPosts(data.posts);
