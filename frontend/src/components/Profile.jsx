@@ -5,6 +5,7 @@ import Navbar from "./Navbar"
 import PostCard from "./PostCard"
 import "../css/Profile.css"
 import userImg from "../assets/images/userIcon.png";
+import ansh from "../assets/images/WhatsApp Image 2024-11-20 at 17.20.21_d5594856.jpg";
 
 export default function Profile() {
     const [user, setUser] = useState(null)

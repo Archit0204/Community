@@ -39,7 +39,7 @@ export default () => {
 
                 <button className="tryitout"> <Link to="/signup"> Try It Out </Link>  </button>
 
-                <Link to="/login"> <button className="login_main">  Login <i className="material-icons">chevron_right</i>  </button> </Link>
+                <Link to="/login"> <button className="login_main"> <span>Login</span>  <i className="material-icons">chevron_right </i>  </button> </Link>
 
 
             </div>
