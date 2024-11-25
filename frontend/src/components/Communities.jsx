@@ -19,7 +19,7 @@ export default () => {
       <div className="main_communities flex flex-row">
         <div className="w-full h-fit">
           <div className="community_page">
-            <div className="communitylistHeading">List of Communities</div>
+            <div className="communitylistHeading" onClick={() => handleCommunityClick("Top Posts")}>List of Communities</div>
             <div
               className="communitylistItems communitylistItem1"
               onClick={() => handleCommunityClick("SPORTS")}
