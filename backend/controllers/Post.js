@@ -1,6 +1,7 @@
 const Comment = require("../models/Comment");
 const Post = require("../models/Post");
 const User = require("../models/User");
+const { isFileTypeSupported, uploadFileToCloudinary } = require("../utils/uploadToCloudinary");
 const { postSchema } = require("../utils/validation");
 
 exports.uploadPost = async (req, res) => {
@@ -9,6 +10,22 @@ exports.uploadPost = async (req, res) => {
 
         const postBody = req.body;
         console.log(postBody);
+
+        const file = req.files.imageFile;
+        console.log(file);
+
+        const fileType = file.name.split('.').at(-1).toLowerCase();
+
+        if (!isFileTypeSupported(fileType)) {
+            return res.status(411).json({
+                success: false,
+                message: "File Type Not Supported"
+            });
+        }
+
+        const response = await uploadFileToCloudinary(file, "DiscussionDock");
+
+        postBody.imageUrl = response.secure_url;
         
         if (!postSchema.safeParse(postBody).success) {
             return res.status(403).json({
@@ -20,9 +37,10 @@ exports.uploadPost = async (req, res) => {
         const userId = req.user.userId;
 
         const post = await Post.create({
-            content: postBody.title,
+            content: postBody.content,
             author: userId,
-            community: postBody.community
+            community: postBody.community,
+            imageUrl: postBody.imageUrl
         });
         
         const updatedUser = await User.findByIdAndUpdate(

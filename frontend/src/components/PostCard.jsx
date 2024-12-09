@@ -71,6 +71,18 @@ export default function Postcard({ post }) {
             {new Date(post.createdAt).toLocaleDateString()}
         </div>
         <h3 style={{ fontSize: '1.1rem', marginBottom: '12px' }}>{post.content}</h3>
+        {post.imageUrl && (
+            <div style={{ marginBottom: '12px' }}>
+                <img 
+                    src={post.imageUrl} 
+                    alt="Post image" 
+                    width={500} 
+                    height={300} 
+                    layout="responsive" 
+                    objectFit="cover"
+                />
+            </div>
+        )}
         <div style={{ display: 'flex', alignItems: 'center' }}>
             <button
             onClick={likeHandler}

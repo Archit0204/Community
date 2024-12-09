@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { string } = require('zod');
 
 const postSchema = new mongoose.Schema({
 
@@ -30,7 +31,10 @@ const postSchema = new mongoose.Schema({
     comments: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Comment',
-    }]
+    }],
+    imageUrl: {
+        type: String
+    }
 });
 
 module.exports = mongoose.model('Post', postSchema);
