@@ -22,9 +22,9 @@ export default function Postcard({ post }) {
             },
             }
         )
-        setLikes(response.data.post.likes.length)
-        setIsLiked(true)
-        toast.success("Post Liked");
+        setLikes(response.data.updatedPost.likes.length)
+        setIsLiked(liked => !liked);
+        
         } catch (error) {
             console.error('Error liking post:', error)
         }
@@ -64,7 +64,7 @@ export default function Postcard({ post }) {
             <div style={{ fontWeight: 'bold' }}>
             {post.author.firstName} {post.author.lastName}
             </div>
-            <div style={{ color: '#fff', backgroundColor: '#1d2c6e', padding: '0.3rem', borderRadius: '0.5rem', width:'110px', display:'flex', justifyContent: 'center' }}>{post.community}</div>
+            <div className='capitalize' style={{ color: '#fff', backgroundColor: '#1d2c6e', padding: '0.3rem', borderRadius: '0.5rem', width:'110px', display:'flex', justifyContent: 'center' }}>{post.community}</div>
         </div>
         <div style={{ color: '#666', fontSize: '0.9rem', marginBottom: '8px' }}>
             <i className="material-icons" style={{ fontSize: '1rem', verticalAlign: 'middle', marginRight: '4px' }}>calendar_month</i>

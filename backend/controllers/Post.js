@@ -68,20 +68,42 @@ exports.likePost = async(req, res) => {
     try {
 
         const postId = req.params.id;
-        
-        const post = await Post.findByIdAndUpdate(postId, {
-            $push: {
-                likes: req.user.userId
-            }
-        }, {
-            new: true
-        });
+        const userId = req.user.userId;
 
-        return res.status(200).json({
-            success: true,
-            message: "Post Liked",
-            post
-        });
+        const post = await Post.findById(postId);
+
+        if (post.likes.includes(userId)) {
+            const updatedPost = await Post.findByIdAndUpdate(postId, {
+                $pull: {
+                    likes: userId
+                }
+            }, {
+                new: true
+            });
+
+            return res.status(200).json({
+                success: true,
+                message: "Post Unliked",
+                updatedPost
+            });
+        }
+        else {
+
+            const updatedPost = await Post.findByIdAndUpdate(postId, {
+                $push: {
+                    likes: req.user.userId
+                }
+            }, {
+                new: true
+            });
+
+            return res.status(200).json({
+                success: true,
+                message: "Post Liked",
+                updatedPost
+            });
+        }
+
 
     } catch (error) {
         return res.status(500).json({

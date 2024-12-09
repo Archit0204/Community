@@ -44,12 +44,20 @@ function App() {
                     <Route path="communities/upload" element={<UploadPost setFlag={setFlag}/>} />
                     <Route path="settings" element={<Settings />}>
                         <Route path="" element={<General darkmode={darkmode} setdarkmode={setdarkmode} />} />
+
                         {/* <Route path="security" element={<Security />} />
                         <Route path="notifications" element={<Notifications />} />
                         <Route path="apps" element={<setApps />} />
                         <Route path="sharing" element={<Sharing />} /> */}
                     </Route>
-                    <Route path="communities/settings" element={<Settings />} />
+                    <Route path="communities/settings" element={<Settings />}>
+                        <Route path="" element={<General darkmode={darkmode} setdarkmode={setdarkmode} />} />
+                        
+                        {/* <Route path="security" element={<Security />} />
+                        <Route path="notifications" element={<Notifications />} />
+                        <Route path="apps" element={<setApps />} />
+                        <Route path="sharing" element={<Sharing />} /> */}
+                    </Route>
                 </Route>
             </Routes>
                 
