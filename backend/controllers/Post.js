@@ -22,7 +22,7 @@ exports.uploadPost = async (req, res) => {
         const post = await Post.create({
             content: postBody.title,
             author: userId,
-            communtiy: "Coming Soon"
+            communtiy: postBody.community
         });
         
         const updatedUser = await User.findByIdAndUpdate(
