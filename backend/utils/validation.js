@@ -15,8 +15,9 @@ const loginSchema = z.object({
 
 const postSchema = z.object({
     content: z.string().optional(),
-    title: z.string(),
+    title: z.string().optional(),
     community: z.string().optional(),
+    imageurl: z.string().url().optional()
 });
 
 module.exports = {
