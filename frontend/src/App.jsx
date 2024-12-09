@@ -14,11 +14,14 @@ import Posts from "./components/Posts";
 import Communities from "./components/Communities";
 import Profile from "./components/Profile";
 import UploadPost from "./components/UploadPost";
+import Settings from "./components/Settings";
+import General from "./components/settingsComponents/general";
 
 function App() {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [flag, setFlag] = useState(false);
+    const [darkmode, setdarkmode] = useState(false);
     
     return (
         <div className="w-full min-h-screen flex-col justify-start items-center ">
@@ -28,16 +31,25 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/signup" element={<Signup/>}/>
-                <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn}/>}/> 
-                <Route path="/dashboard" element={
-                    <PrivateRoute isLoggedIn={isLoggedIn}>
-                        <Dashboard />
-                    </PrivateRoute>
+                <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn}  />}/> 
+                <Route path="/dashboard" element={ <Dashboard darkmode={darkmode} />
+                    // <PrivateRoute isLoggedIn={isLoggedIn}>
+                    //     <Dashboard />
+                    // </PrivateRoute>
                     }>
-                    <Route index element={<Dashboard_home/>} />
+                    <Route path="" element={<Dashboard_home/>} />
                     <Route path="communities" element={<Communities />} />
                     <Route path="profile" element={<Profile />} />
                     <Route path="upload" element={<UploadPost setFlag={setFlag}/>} />
+                    <Route path="communities/upload" element={<UploadPost setFlag={setFlag}/>} />
+                    <Route path="settings" element={<Settings />}>
+                        <Route path="" element={<General darkmode={darkmode} setdarkmode={setdarkmode} />} />
+                        {/* <Route path="security" element={<Security />} />
+                        <Route path="notifications" element={<Notifications />} />
+                        <Route path="apps" element={<setApps />} />
+                        <Route path="sharing" element={<Sharing />} /> */}
+                    </Route>
+                    <Route path="communities/settings" element={<Settings />} />
                 </Route>
             </Routes>
                 

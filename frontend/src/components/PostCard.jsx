@@ -64,7 +64,7 @@ export default function Postcard({ post }) {
             <div style={{ fontWeight: 'bold' }}>
             {post.author.firstName} {post.author.lastName}
             </div>
-            <div className='capitalize font-medium bg-slate-900 text-white px-2 py-1 rounded-xl'>{post.community}</div>
+            <div style={{ color: '#fff', backgroundColor: '#1d2c6e', padding: '0.3rem', borderRadius: '0.5rem', width:'110px', display:'flex', justifyContent: 'center' }}>{post.community}</div>
         </div>
         <div style={{ color: '#666', fontSize: '0.9rem', marginBottom: '8px' }}>
             <i className="material-icons" style={{ fontSize: '1rem', verticalAlign: 'middle', marginRight: '4px' }}>calendar_month</i>

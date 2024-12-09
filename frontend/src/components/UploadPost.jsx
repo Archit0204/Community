@@ -157,9 +157,7 @@ export default ({setFlag}) => {
 
             if (data.success) {
                 setPostData({
-                    title: "",
-                    content: "",
-                    community: "" // Reset community as well
+                    title: "", content: ""
                 });
                 setFlag((prev => !prev));
                 toast.success("Post Added");

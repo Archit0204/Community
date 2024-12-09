@@ -11,7 +11,7 @@ export default() => {
                 <span>Chats</span>
                 <button className="material-icons sideNavButton">notes</button>
                 <span>Notes</span>
-                <button className="material-icons sideNavButton">settings</button>
+                <button className="material-icons sideNavButton"> <Link to="settings"> settings </Link> </button>
                 <span> Settings </span>
             </div>
         </div>
