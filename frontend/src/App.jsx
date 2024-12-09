@@ -16,6 +16,10 @@ import Profile from "./components/Profile";
 import UploadPost from "./components/UploadPost";
 import Settings from "./components/Settings";
 import General from "./components/settingsComponents/general";
+import Security from "./components/settingsComponents/security";
+import SeApps from "./components/settingsComponents/apps";
+import Notifications from "./components/settingsComponents/notifications";
+import Sharing from "./components/settingsComponents/sharing";
 
 function App() {
 
@@ -44,19 +48,17 @@ function App() {
                     <Route path="communities/upload" element={<UploadPost setFlag={setFlag}/>} />
                     <Route path="settings" element={<Settings />}>
                         <Route path="" element={<General darkmode={darkmode} setdarkmode={setdarkmode} />} />
-
-                        {/* <Route path="security" element={<Security />} />
+                        <Route path="security" element={<Security />} />
                         <Route path="notifications" element={<Notifications />} />
-                        <Route path="apps" element={<setApps />} />
-                        <Route path="sharing" element={<Sharing />} /> */}
+                        <Route path="apps" element={<SeApps />} />
+                        <Route path="sharing" element={<Sharing />} />
                     </Route>
                     <Route path="communities/settings" element={<Settings />}>
                         <Route path="" element={<General darkmode={darkmode} setdarkmode={setdarkmode} />} />
-                        
-                        {/* <Route path="security" element={<Security />} />
+                        <Route path="security" element={<Security />} />
                         <Route path="notifications" element={<Notifications />} />
-                        <Route path="apps" element={<setApps />} />
-                        <Route path="sharing" element={<Sharing />} /> */}
+                        <Route path="apps" element={< SeApps />} />
+                        <Route path="sharing" element={<Sharing />} />
                     </Route>
                 </Route>
             </Routes>

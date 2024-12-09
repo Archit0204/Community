@@ -9,10 +9,10 @@ export default() =>{
                 <h1 className="text-3xl"> Settings </h1>
                 <ul className="flex flex-row w-full justify-around ">
                     <li className="settingtype"> <Link to=""> General </Link> </li>
-                    <li className="settingtype">Security</li>
-                    <li className="settingtype">Notifications</li>
-                    <li className="settingtype">Apps</li>
-                    <li className="settingtype">Sharing</li>
+                    <li className="settingtype"> <Link to="security"> Security</Link></li>
+                    <li className="settingtype"><Link to="notifications">Notifications</Link></li>
+                    <li className="settingtype"> <Link to="apps">Apps</Link> </li>
+                    <li className="settingtype"><Link to="sharing">Sharing</Link></li>
                 </ul>
                 <div>
                     <Outlet />
