@@ -41,7 +41,7 @@ export default function Profile() {
         <div className="main_profile">
             <div className="Userboard">
             <div className="Personalboard">
-                <img className="userimage rounded-full" src={ansh} alt="User Icon" />
+                <img className="userimage rounded-full" src={userImg} alt="User Icon" />
                 <div className="userName">
                 <span id="name">{user.firstName} {user.lastName}</span>
                 </div>
